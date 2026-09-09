@@ -291,12 +291,18 @@ a:hover { text-decoration: underline; }
 }
 .nearby a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-/* 지점 본문(.mb-post) — 자체 인라인 스타일(라이트·메가박스 레드)을 그대로 쓰고,
-   폭만 컨테이너에 맞춤. 라이트 모드는 원본 그대로 유지. */
+/* 지점 본문(.mb-post) — 자체 인라인 스타일을 그대로 쓰고, 폭만 컨테이너에 맞춤. */
 .mb-post { max-width: 100% !important; }
 
+/* 메인 CTA(원본 오렌지 그라데이션) → 사이트 퍼플 테마로 통일.
+   지도앱 버튼(네이버/카카오/구글)은 각 브랜드색 유지 */
+.mb-post .mb-btn:not(.mb-btn-naver):not(.mb-btn-kakao):not(.mb-btn-google) {
+  background: linear-gradient(135deg, var(--cta-2), var(--cta)) !important;
+  box-shadow: 0 4px 15px rgba(58, 28, 113, 0.3) !important;
+}
+
 /* 다크모드 보정 — 인라인 스타일이 라이트 고정이라 가독성만 토큰으로 오버라이드.
-   (메가박스 레드 강조색은 유지, 배경·본문 텍스트만 다크에 맞춤) */
+   (강조색은 유지, 배경·본문 텍스트만 다크에 맞춤) */
 :root[data-theme="dark"] .mb-post { color: var(--text) !important; }
 :root[data-theme="dark"] .mb-post p,
 :root[data-theme="dark"] .mb-post li,
