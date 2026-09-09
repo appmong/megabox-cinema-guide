@@ -301,6 +301,9 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 4px 15px rgba(58, 28, 113, 0.3) !important;
 }
 
+/* 버튼 사이 <br> 제거 → flex gap(12px)만 남겨 버튼 간격 좁힘(롯데와 동일) */
+.mb-post .mb-btns br { display: none; }
+
 /* 다크모드 보정 — 인라인 스타일이 라이트 고정이라 가독성만 토큰으로 오버라이드.
    (강조색은 유지, 배경·본문 텍스트만 다크에 맞춤) */
 :root[data-theme="dark"] .mb-post { color: var(--text) !important; }

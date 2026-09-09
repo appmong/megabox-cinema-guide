@@ -50,6 +50,7 @@ for (const t of theaters) {
   try {
     bodyHtml = readFileSync(resolve(SRC, "pages", htmlName), "utf8")
       .replace(/<!--[\s\S]*?-->/g, "") // 붙여넣기용 주석 제거
+      .replace(/\btarget="_blank"/g, 'target="_self"') // 같은 탭 이동(애드센스 전면광고 노출)
       .trim();
   } catch {
     // 본문 파일 없음(휴관 지점 등: 파일명이 `..(휴관).html`) → 제외
