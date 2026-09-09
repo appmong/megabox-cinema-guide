@@ -19,7 +19,7 @@ export const SITE = {
 // 검색엔진 인증 (발급 후 값만 채우면 <head>에 자동 삽입)
 export const VERIFICATION = {
   google: "",
-  naver: "",
+  naver: "e792f656d90e52b25d589ea219e0b130bd3f54c4",
 } as const;
 
 // 애드센스 — ca-pub-XXXX (승인 도메인 하위라 기존 값 사용)
@@ -29,7 +29,7 @@ export const ADSENSE = {
 
 // 애널리틱스 (선택 — 발급 후 채우기)
 export const ANALYTICS = {
-  naver: "",
+  naver: "1c3291573830360",
   google: "",
 } as const;
 
